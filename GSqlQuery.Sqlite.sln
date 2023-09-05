@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GSqlQuery.Sqlite", "src\GSqlQuery.Sqlite\GSqlQuery.Sqlite.csproj", "{E1116201-54BE-41F5-97E1-3C9C422A8D5B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GSqlQuery.Sqlite.Test", "test\GSqlQuery.Sqlite.Test\GSqlQuery.Sqlite.Test.csproj", "{D0EC5A3F-801F-4D63-946F-46FCE1CAA555}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GSqlQuery.Sqlite.Benchmark", "benchmarks\GSqlQuery.Sqlite.Benchmark\GSqlQuery.Sqlite.Benchmark.csproj", "{DA467ACB-F3D7-43D3-BB6B-0B73171340E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DED6471B-11AC-452B-B230-1D4D3FBAD84D}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1116201-54BE-41F5-97E1-3C9C422A8D5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1116201-54BE-41F5-97E1-3C9C422A8D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1116201-54BE-41F5-97E1-3C9C422A8D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1116201-54BE-41F5-97E1-3C9C422A8D5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0EC5A3F-801F-4D63-946F-46FCE1CAA555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0EC5A3F-801F-4D63-946F-46FCE1CAA555}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0EC5A3F-801F-4D63-946F-46FCE1CAA555}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0EC5A3F-801F-4D63-946F-46FCE1CAA555}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA467ACB-F3D7-43D3-BB6B-0B73171340E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA467ACB-F3D7-43D3-BB6B-0B73171340E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA467ACB-F3D7-43D3-BB6B-0B73171340E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA467ACB-F3D7-43D3-BB6B-0B73171340E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2B5AB91-884F-4FC5-A255-BCF8827F299E}
+	EndGlobalSection
+EndGlobal
