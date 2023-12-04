@@ -1,5 +1,4 @@
 ﻿using GSqlQuery.Runner;
-using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Data;
 using System.Threading;
@@ -15,9 +14,6 @@ namespace GSqlQuery.Sqlite
         public SqliteDatabaseManagement(string connectionString, DatabaseManagementEvents events) : base(connectionString, events)
         { }
 
-        public SqliteDatabaseManagement(string connectionString, DatabaseManagementEvents events, ILogger logger) : base(connectionString, events, logger)
-        { }
-
         public int ExecuteNonQuery(SqliteDatabaseConnection connection, IQuery query, IEnumerable<IDataParameter> parameters)
         {
             return base.ExecuteNonQuery(connection, query, parameters);
@@ -29,13 +25,13 @@ namespace GSqlQuery.Sqlite
         }
 
         public IEnumerable<T> ExecuteReader<T>(SqliteDatabaseConnection connection, IQuery<T> query, IEnumerable<PropertyOptions> propertyOptions, IEnumerable<IDataParameter> parameters)
-            where T : class, new()
+            where T : class
         {
             return base.ExecuteReader<T>(connection, query, propertyOptions, parameters);
         }
 
         public Task<IEnumerable<T>> ExecuteReaderAsync<T>(SqliteDatabaseConnection connection, IQuery<T> query, IEnumerable<PropertyOptions> propertyOptions, IEnumerable<IDataParameter> parameters, CancellationToken cancellationToken = default) 
-            where T : class, new()
+            where T : class
         {
             return base.ExecuteReaderAsync<T>(connection, query, propertyOptions, parameters, cancellationToken);
         }

@@ -1,6 +1,6 @@
 ﻿namespace GSqlQuery.Sqlite
 {
-    public sealed class SqliteStatements : Statements
+    public sealed class SqliteFormats : DefaultFormats
     {
         public override string Format => "\"{0}\"";
 

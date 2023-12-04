@@ -21,7 +21,7 @@ namespace GSqlQuery.Sqlite.Test
         [Fact]
         public void Create_SqliteConnectionOptions_With_statements_and_sqlServerDatabaseManagment()
         {
-            var SqliteConnectionOptions = new SqliteConnectionOptions(new SqliteStatements(), new SqliteDatabaseManagement(Helper.ConnectionString));
+            var SqliteConnectionOptions = new SqliteConnectionOptions(new SqliteFormats(), new SqliteDatabaseManagement(Helper.ConnectionString));
             Assert.NotNull(SqliteConnectionOptions);
         }
     }

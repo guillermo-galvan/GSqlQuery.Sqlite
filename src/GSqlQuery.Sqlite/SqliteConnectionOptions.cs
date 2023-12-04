@@ -1,19 +1,17 @@
-﻿using GSqlQuery.Runner;
-
-namespace GSqlQuery.Sqlite
+﻿namespace GSqlQuery.Sqlite
 {
     public class SqliteConnectionOptions : ConnectionOptions<SqliteDatabaseConnection>
     {
         public SqliteConnectionOptions(string connectionString) :
-            base(new SqliteStatements(), new SqliteDatabaseManagement(connectionString))
+            base(new SqliteFormats(), new SqliteDatabaseManagement(connectionString))
         { }
 
         public SqliteConnectionOptions(string connectionString, DatabaseManagementEvents events) :
-            base(new SqliteStatements(), new SqliteDatabaseManagement(connectionString, events))
+            base(new SqliteFormats(), new SqliteDatabaseManagement(connectionString, events))
         { }
 
-        public SqliteConnectionOptions(IStatements statements, SqliteDatabaseManagement sqlServerDatabaseManagement) :
-            base(statements, sqlServerDatabaseManagement)
+        public SqliteConnectionOptions(IFormats formats, SqliteDatabaseManagement sqliteDatabaseManagement) :
+            base(formats, sqliteDatabaseManagement)
         {
 
         }
