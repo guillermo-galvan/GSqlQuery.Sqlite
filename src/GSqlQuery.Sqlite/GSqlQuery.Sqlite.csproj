@@ -5,7 +5,20 @@
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<VersionPrefix>1.0.0-alpha</VersionPrefix>
 	<Description>Create queries from a class and add execution to Sqlite database</Description>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\logo\logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="GSqlQuery.Runner" Version="1.0.0-alpha5" />

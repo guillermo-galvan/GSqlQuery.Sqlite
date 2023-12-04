@@ -1,6 +1,4 @@
-﻿using GSqlQuery.Runner;
-
-namespace GSqlQuery.Sqlite
+﻿namespace GSqlQuery.Sqlite
 {
     public class SqliteConnectionOptions : ConnectionOptions<SqliteDatabaseConnection>
     {
@@ -12,8 +10,8 @@ namespace GSqlQuery.Sqlite
             base(new SqliteFormats(), new SqliteDatabaseManagement(connectionString, events))
         { }
 
-        public SqliteConnectionOptions(IFormats formats, SqliteDatabaseManagement sqlServerDatabaseManagement) :
-            base(formats, sqlServerDatabaseManagement)
+        public SqliteConnectionOptions(IFormats formats, SqliteDatabaseManagement sqliteDatabaseManagement) :
+            base(formats, sqliteDatabaseManagement)
         {
 
         }
