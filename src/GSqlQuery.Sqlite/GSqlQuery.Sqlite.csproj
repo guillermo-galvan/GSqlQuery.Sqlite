@@ -3,10 +3,13 @@
   <PropertyGroup>
 	  <TargetFrameworks>netstandard2.0;netstandard2.1;net462;net6.0;net7.0;net8.0</TargetFrameworks>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	<VersionPrefix>1.0.0-alpha</VersionPrefix>
 	<Description>Create queries from a class and add execution to Sqlite database</Description>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageIcon>logo.png</PackageIcon>
+
+	  <EnablePackageValidation>true</EnablePackageValidation>
+	  <PublishRepositoryUrl>true</PublishRepositoryUrl>
+	  <EmbedUntrackedSources>true</EmbedUntrackedSources>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,8 +24,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="GSqlQuery.Runner" Version="1.0.0-alpha5" />
+    <PackageReference Include="GSqlQuery.Runner" Version="1.0.0-rc" />
     <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.0" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

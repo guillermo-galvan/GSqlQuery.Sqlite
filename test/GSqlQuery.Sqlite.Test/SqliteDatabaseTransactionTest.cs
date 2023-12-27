@@ -162,5 +162,26 @@ namespace GSqlQuery.Sqlite.Test
                 }
             }
         }
+
+        [Fact]
+        public void Transaction_is_not_null()
+        {
+            using (var connection = _connectionOptions.DatabaseManagement.GetConnection())
+            {
+                using var transaction = connection.BeginTransaction();
+                Assert.NotNull(transaction.Transaction);
+            }
+        }
+
+        [Fact]
+        public void Transaction_is_null()
+        {
+            using (var connection = _connectionOptions.DatabaseManagement.GetConnection())
+            {
+                var transaction = connection.BeginTransaction();
+                transaction= null;
+                Assert.Null(transaction?.Transaction);
+            }
+        }
     }
 }
