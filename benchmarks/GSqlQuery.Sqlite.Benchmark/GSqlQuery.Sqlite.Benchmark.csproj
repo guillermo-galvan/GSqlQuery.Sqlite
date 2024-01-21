@@ -6,8 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BenchmarkDotNet" Version="0.13.11" />
-    <PackageReference Include="GSqlQuery.Sqlite" Version="1.0.0-alpha" />
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\GSqlQuery.Sqlite\GSqlQuery.Sqlite.csproj" />
   </ItemGroup>
 
 </Project>
