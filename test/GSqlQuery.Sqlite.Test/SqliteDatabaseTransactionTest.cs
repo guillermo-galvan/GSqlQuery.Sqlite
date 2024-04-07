@@ -136,7 +136,7 @@ namespace GSqlQuery.Sqlite.Test
             {
                 using (var transaction = await connection.BeginTransactionAsync(token))
                 {
-                    var result = await test.Insert(_connectionOptions).Build().ExecuteAsync(transaction.Connection, token);
+                    var result = await test.Insert(_connectionOptions).Build().ExecuteAsync(connection, token);
                     await transaction.RollbackAsync(token);
                     var isExists = Test2.Select(_connectionOptions).Where().Equal(x => x.Id, result.Id).AndEqual(x => x.Money, test.Money).Build().Execute(connection).Any();
                     await connection.CloseAsync(token);
@@ -169,7 +169,7 @@ namespace GSqlQuery.Sqlite.Test
             using (var connection = _connectionOptions.DatabaseManagement.GetConnection())
             {
                 using var transaction = connection.BeginTransaction();
-                Assert.NotNull(transaction.Transaction);
+                Assert.NotNull(transaction.Connection);
             }
         }
 
@@ -180,7 +180,7 @@ namespace GSqlQuery.Sqlite.Test
             {
                 var transaction = connection.BeginTransaction();
                 transaction= null;
-                Assert.Null(transaction?.Transaction);
+                Assert.Null(transaction?.Connection);
             }
         }
     }
