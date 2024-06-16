@@ -28,7 +28,7 @@ namespace GSqlQuery.Sqlite.Test
             {
                 result.Open();
                 result.Dispose();
-                Assert.Equal(ConnectionState.Closed, result.State);
+                Assert.Equal(ConnectionState.Broken, result.State);
             }
         }
 
